@@ -1,6 +1,3 @@
-# .-.    . . .-.-.
-# |.|.-.-|-.-|-`-..-,.-.. .
-# `-``-`-'-' ' `-'`'-'   `
 # DCAVET Core
 This application extracts the data from different data sources and store them into a database that be later used for analysis.
 
