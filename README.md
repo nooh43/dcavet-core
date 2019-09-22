@@ -7,9 +7,11 @@ The application is designed to work on Linux CentOS7/RHEL7. It should work just 
 - curl
 - mariadb/mysql
 ### Structure
-- > **logs** : *Contains data extracted from the application*
-    - > **daily** : *data extracted from the api on a daily bases*
-    - > **errors** : *data about errors that happened during installation or running the application*
+- **logs** : *Contains data extracted from the application*
+    - **daily** : *data extracted and processed*
+        - **pre** : *raw data extracted from the api*
+        - **post** : *cleaned data*
+    - **errors** : *data about errors that happened during installation or running the application*
 ### Installing
 TBD
 
