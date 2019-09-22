@@ -31,3 +31,28 @@ then
     echo No problem, goodbye!
     exit 0
 fi
+
+# Step 1 : Updating the systems
+echo -ne "SYSTEM UPDATE               [\e[1;30;1;1;47min progress\e[0m]\r"
+{
+    sudo yum -y update
+} > logs/logs/installation.log 2> logs/errors/installation.log
+echo -ne "SYSTEM UPDATE               [\e[1;37;1;1;42m   +done   \e[0m]"
+echo
+
+# Step 2 : Installing epel
+echo -ne "EPEL INSTALLATION           [\e[1;30;1;1;47min progress\e[0m]\r"
+{
+    sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    sudo yum -y update
+} > logs/logs/installation.log 2> logs/errors/installation.log
+echo -ne "EPEL INSTALLATION           [\e[1;37;1;1;42m   +done   \e[0m]"
+echo
+
+# Step 3 : Installing esential packages
+echo -ne "PACKAGES INSTALLATION       [\e[1;30;1;1;47min progress\e[0m]\r"
+{
+    sudo yum -y install nano wget git mariadb
+} > logs/logs/installation.log 2> logs/errors/installation.log
+echo -ne "PACKAGES INSTALLATION       [\e[1;37;1;1;42m   +done   \e[0m]"
+echo
