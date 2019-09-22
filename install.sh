@@ -58,12 +58,12 @@ echo -ne "PACKAGES INSTALLATION       [\e[1;37;1;1;42m   +done   \e[0m]"
 echo
 
 # Step 4 : Setting up mariadb
-echo -ne "SETTING MARIADB       [\e[1;30;1;1;47min progress\e[0m]\r"
+echo -ne "SETTING MARIADB             [\e[1;30;1;1;47min progress\e[0m]\r"
 {
     sudo systemctl start mariadb
     sudo systemctl enable mariadb.service
 } > logs/logs/installation.log 2> logs/errors/installation.log
-echo -ne "SETTING MARIADB       [\e[1;37;1;1;42m   +done   \e[0m]"
+echo -ne "SETTING MARIADB             [\e[1;37;1;1;42m   +done   \e[0m]"
 echo
 
 # The End
