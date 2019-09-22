@@ -52,7 +52,20 @@ echo
 # Step 3 : Installing esential packages
 echo -ne "PACKAGES INSTALLATION       [\e[1;30;1;1;47min progress\e[0m]\r"
 {
-    sudo yum -y install nano wget git mariadb
+    sudo yum -y install nano wget git mariadb-server mariadb
 } > logs/logs/installation.log 2> logs/errors/installation.log
 echo -ne "PACKAGES INSTALLATION       [\e[1;37;1;1;42m   +done   \e[0m]"
 echo
+
+# Step 4 : Setting up mariadb
+echo -ne "SETTING MARIADB       [\e[1;30;1;1;47min progress\e[0m]\r"
+{
+    sudo systemctl start mariadb
+    sudo systemctl enable mariadb.service
+} > logs/logs/installation.log 2> logs/errors/installation.log
+echo -ne "SETTING MARIADB       [\e[1;37;1;1;42m   +done   \e[0m]"
+echo
+
+# The End
+echo
+echo -e "\e[31;1m  Awesome, Everything is set, Thank you.  \e[0m"
