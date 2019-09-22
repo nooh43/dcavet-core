@@ -15,7 +15,7 @@ TBD
 TBD
 
 ## Authors
-    * **Nasser Humood** - *project manager and main developer*
+* **Nasser Humood** - *project manager and main developer*
 
 ## License
 TBD
